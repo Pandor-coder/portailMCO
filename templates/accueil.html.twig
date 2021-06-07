@@ -1,0 +1,25 @@
+{% extends('layout.html.twig') %}
+{% block body %}
+    <div class="container famille-outil">
+        <div class="row align-self-right">
+            <br>
+            <div class="col-6"></div>
+        </div>
+        <div class="row">
+            {% for famille in familles  %}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <p><a href="{{ path('index_index') }}"><img src="{{ asset('css/images/logo_EDF_RVB.png') }}"  width="80"></a></p>
+                    <div >
+                        <h5 class="card-title">
+                            {{ famille.libelle }}
+                        </h5>
+                            <br>
+                        <p class="card-text"></p>
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
