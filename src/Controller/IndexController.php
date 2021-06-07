@@ -37,6 +37,7 @@ class IndexController extends AbstractController
         }
 
       */
+
         $entityManager = $this->getDoctrine()->getManager();
         $familles = $entityManager->getRepository(FamilleOutils::class)->findAll();
         return $this->render('accueil.html.twig',['familles' => $familles]);
